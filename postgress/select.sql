@@ -130,3 +130,25 @@ SELECT count(*) from students;
 
 
 SELECT max(length(first_name)) FROM students;
+
+
+
+-- NOT
+SELECT * from students
+    WHERE NOT country = 'USA'
+
+
+-- SELECT NULL = 1
+
+
+SELECT * from students
+    WHERE email is NOT NULL;
+
+
+SELECT * from students
+
+
+-- SELECT COALESCE(NULL, NULL, 5)
+
+
+SELECT COALESCE(email, 'Email not provided') as "Email", blood_group, first_name from students;
