@@ -206,3 +206,10 @@ SELECT * FROM students;
 -- DELETE FROM students
 DELETE FROM students
     WHERE grade = 'B' and country = 'USA';
+
+
+SELECT * FROM students
+
+UPDATE students
+    set email = 'default@gmail.com', age = 44
+    id = 5;
