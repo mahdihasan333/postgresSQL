@@ -37,3 +37,22 @@ ALTER TABLE person2
 
 -- Insert value
 INSERT into person2 values(8, 'test2', 45, 'test@gmail.com')
+
+
+
+-- Add uniqueness
+ALTER TABLE person2
+    ADD constraint unique_person2_user_age UNIQUE(user_age);
+
+
+-- Drop uniqueness
+ALTER TABLE person2
+    DROP constraint unique_person2_user_age;
+
+
+-- drop full database table
+DROP TABLE person2;
+
+
+-- drop full table data
+TRUNCATE Table person2;
