@@ -6,7 +6,9 @@ CREATE TABLE "user"(
 CREATE Table post(
     id SERIAL PRIMARY KEY,
     title TEXT NOT NULL,
-    user_id INTEGER REFERENCES "user"(id)
+    -- user_id INTEGER REFERENCES "user"(id) ON DELETE CASCADE
+    -- user_id INTEGER REFERENCES "user"(id) ON DELETE set NULL
+    user_id INTEGER REFERENCES "user"(id) ON DELETE set DEFAULT DEFAULT 2
 );
 
 
@@ -26,7 +28,10 @@ INSERT INTO post(title, user_id) VALUES
 ('Exploring adventures with sagor!', 4),
 ('Nodi`s wisdom always leaves me inspired!', 4);
 
+DROP Table post;
+DROP Table "user";
 
+SELECT * FROM "user";
 SELECT * FROM post;
 
 
@@ -41,7 +46,8 @@ INSERT INTO post(title, user_id) VALUES('test', NULL);
 -- Attempting to insert a post without specifying a user ID
 
 
-
+DELETE FROM "user"
+    WHERE id = 4
 
 -- Deletion constraint on DELETE user
 -- Restrict Deletion -> ON DELETE RESTRICT / ON DELETE NO ACTION (default)
