@@ -46,6 +46,9 @@ SELECT p.id FROM post as p
 INNER JOIN "user" as u on p.user_id = u.id;
 
 
+-- SELECT * FROM "user"
+-- JOIN post on post.user_id = "user".id;
+
 
 INSERT INTO post (id, title, user_id) VALUES
 (5,'this is a test post title', NULL);
