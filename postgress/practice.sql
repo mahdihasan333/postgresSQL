@@ -101,7 +101,7 @@ CREATE TABLE orders (
     total_amount DECIMAL(10, 2)
 );
 
-INSERT INTO orders (customer_id, order_date, total_amount) VALUES 
+INSERT INTO orders (customer_id, order_date, total_amount) VALUES
     (1, '2022-01-05', 100.50),
     (2, '2020-01-07', 200.75),
     (1, '2022-01-08', 150.25),
@@ -113,6 +113,8 @@ INSERT INTO orders (customer_id, order_date, total_amount) VALUES
     (3, '2021-02-01', 250.50),
     (1, '2022-02-05', 180.25),
     (4, '2023-02-05', 190.25);
+
+SELECT * FROM orders;
 
 DROP Table orders;
 
