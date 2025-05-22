@@ -59,5 +59,5 @@ SELECT * from employees WHERE salary > (SELECT max(salary) from employees WHERE 
 
 SELECT employee_name, salary, department_name
 FROM employees
-WHERE department_name in                
+WHERE department_name in
 (SELECT department_name FROM employees WHERE department_name LIKE '%R%');
